@@ -40,7 +40,7 @@ export default function Component() {
   )
 }
 
-function ActivityIcon(props) {
+function ActivityIcon(props: any) {
   return (
     <svg
       {...props}
