@@ -14,7 +14,7 @@ export async function getGithubProfile(yourGithubUsername: string) {
     method: "GET",
     headers: reqHeaders,
     next: {
-      revalidate: 3600,
+      revalidate: 3,
     },
   });
   const githubProfile = await res.json();
