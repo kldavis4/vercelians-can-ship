@@ -36,6 +36,10 @@ export async function getData(url: string) {
       revalidate: 3,
     },
   });
-  const data = await res.json();
-  return data;
+  try {
+    return await res.json();
+  } catch (e) {
+    console.warn(e)
+  }
+  return { error: "Failed to fetch data" };
 }
