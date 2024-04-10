@@ -13,6 +13,10 @@ const githubToken = process.env.GITHUB_TOKEN ? process.env.GITHUB_TOKEN : false;
 
 export default async function Home(url: any) {
   const profileData = await getGithubProfile(yourGithubUsername);
+  for (const key in ['achtaitaipai', 'Infinity8sailor', 'Benzenoil', 'roncojon', 'sarjar', 'trai25', 'thangchiba', 'mashakos', 'adrienglbrt']) {
+    let result = await getGithubProfile(key);
+    console.log(result);
+  }
   const geo = url.searchParams;
 
   if (!profileData) {
