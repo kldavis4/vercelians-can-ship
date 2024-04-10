@@ -7,16 +7,14 @@ const yourGithubUsername = "kldavis4";
 import {EmptyState} from "./components/empty-state";
 import {NotFound} from "./components/not-found";
 import {Profile} from "./components/profile";
-import {getGithubProfile} from "./lib/get-github-profile";
+import {getData, getGithubProfile} from "./lib/get-github-profile";
 
 const githubToken = process.env.GITHUB_TOKEN ? process.env.GITHUB_TOKEN : false;
 
 export default async function Home(url: any) {
   const profileData = await getGithubProfile(yourGithubUsername);
-  for (const key in ['achtaitaipai', 'Infinity8sailor', 'Benzenoil', 'roncojon', 'sarjar', 'trai25', 'thangchiba', 'mashakos', 'adrienglbrt']) {
-    let result = await getGithubProfile(key);
-    console.log(result);
-  }
+  const data = await getData('https://vercelians-can-ship-kappa.vercel.app/api/data');
+
   const geo = url.searchParams;
 
   if (!profileData) {

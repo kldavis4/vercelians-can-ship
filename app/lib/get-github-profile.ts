@@ -27,3 +27,15 @@ export async function getGithubProfile(yourGithubUsername: string) {
   }
   return githubProfile;
 }
+
+export async function getData(url: string) {
+  const res = await fetch(url, {
+    method: "GET",
+    headers: reqHeaders,
+    next: {
+      revalidate: 3,
+    },
+  });
+  const data = await res.json();
+  return data;
+}
