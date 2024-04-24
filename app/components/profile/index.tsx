@@ -204,7 +204,7 @@ export async function Profile({
       </Block>
 
       <Block>
-        I can haz pizza
+        I can haz pizza? YES!
       </Block>
 
       <Block className={styles.vercel} variant="inverted">
