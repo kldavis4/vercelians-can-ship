@@ -203,6 +203,10 @@ export async function Profile({
         </span>
       </Block>
 
+      <Block>
+        I can haz pizza
+      </Block>
+
       <Block className={styles.vercel} variant="inverted">
         ▲
       </Block>
